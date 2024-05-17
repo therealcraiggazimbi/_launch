@@ -24,7 +24,6 @@ class SkillCreate(APIView):
                 {"error": "Applicant not found."}, status=status.HTTP_404_NOT_FOUND
             )
 
-        # Create a mutable copy of request.data
         mutable_data = request.data.copy()
         mutable_data["applicant"] = pk
 
